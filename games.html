@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+    <link rel="stylesheet" href="./css/games_styles.css">
+</head>
+<body>
+    <header>
+        <h1>Choose a Game</h1>
+    </header>
+
+    <section class="game-cards">
+        <div class="game-card" onclick="navigateToGame('memory-game.html')">
+            <img src="./images/icons/memory.png" alt="Memory Game Icon">
+            <h2>Memory Game</h2>
+            <button>Play Now</button>
+        </div>
+
+        <div class="game-card" onclick="navigateToGame('flappy-bird.html')">
+            <img src="./images/icons/flappy.png" alt="Flappy Bird Icon">
+            <h2>Flappy Bird</h2>
+            <button>Play Now</button>
+        </div>
+
+        <!-- Add more game cards as needed -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Website</p>
+    </footer>
+
+    <script>
+        function navigateToGame(gamePage) {
+            if (gamePage === "flappy-bird.html")
+            {
+                alert("flappy bird still in develop.")
+            }
+            else if (gamePage === "memory-game.html")
+            {
+                alert("memory game still in develop.")
+            }
+            else
+            {
+                window.location.href = gamePage;
+            }
+        }
+    </script>
+</body>
+</html>
