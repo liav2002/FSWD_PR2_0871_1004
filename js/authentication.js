@@ -22,7 +22,7 @@ function login() {
             alert('Login successful!');
 
             // redirect to games.html
-            window.location.href = './games.html';
+            window.location.href = './home.html';
 
         } else {
             alert('Account is blocked. Contact support.');

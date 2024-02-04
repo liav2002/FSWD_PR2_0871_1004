@@ -64,7 +64,7 @@ function is_anyone_logged_in() {
     if (loggedInUser && loggedInUser.user_id) {
         // Redirect to games.html
         console.log("System recognize logged-in user.")
-        window.location.href = './games.html';
+        window.location.href = './home.html';
     } else {
         console.log("System can't recognize logged-in user.")
     }
