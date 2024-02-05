@@ -19,11 +19,18 @@
 
     <footer>
         <p>&copy; 2024 Your Website</p>
+        <button id="logoutButton">Logout</button>
     </footer>
 
     <script>
-        // Retrieve username from local storage
+        // Check if loggedInUser does not exist in local storage
         const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+        if (!loggedInUser) {
+            // Redirect to index.html
+            window.location.href = './index.html';
+        }
+
+        // Retrieve username from local storage
         const users = JSON.parse(localStorage.getItem('users')) || [];
         const user = users.find(u => u.user_id === loggedInUser.user_id);
 
@@ -32,19 +39,22 @@
 
         // Function to navigate to another page
         function navigateTo(page) {
-            if (page === "scores.html")
-            {
+            if (page === "scores.html") {
                 alert("scores page still in develop.")
-            }
-            else if (page === "profile.html")
-            {
+            } else if (page === "profile.html") {
                 alert("profile page still in develop.")
-            }
-            else
-            {
+            } else {
                 window.location.href = page;
             }
         }
+
+        // Logout functionality
+        document.getElementById('logoutButton').addEventListener('click', () => {
+            // Clear loggedInUser from local storage
+            localStorage.removeItem('loggedInUser');
+            // Redirect to index.html after logout
+            window.location.href = './index.html';
+        });
     </script>
 </body>
 </html>

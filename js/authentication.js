@@ -21,7 +21,7 @@ function login() {
 
             alert('Login successful!');
 
-            // redirect to games.html
+            // redirect to home.html
             window.location.href = './home.html';
 
         } else {
