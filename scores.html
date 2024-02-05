@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard - Scores</title>
+    <link rel="stylesheet" href="./css/scores_styles.css">
+</head>
+<body>
+    <header>
+        <h1>Leaderboard - Scores</h1>
+    </header>
+
+    <div class="tabs" id="tabs">
+        <button id="totalPointsButton" onclick="showTab('totalPoints')">Total Points</button>
+        <button id="ticTacToeButton" onclick="showTab('ticTacToe')">Tic Tac Toe Scores</button>
+        <button id="flappyBirdButton" onclick="showTab('flappyBird')">Flappy Bird Scores</button>
+    </div>
+
+    <div id="totalPointsTab" class="scores-list">
+        <h2>Total Points</h2>
+        <ul id="totalPointsList"></ul>
+    </div>
+
+    <div id="ticTacToeTab" class="scores-list">
+        <h2>Tic Tac Toe Scores</h2>
+        <ul id="ticTacToeList"></ul>
+    </div>
+
+    <div id="flappyBirdTab" class="scores-list">
+        <h2>Flappy Bird Scores</h2>
+        <ul id="flappyBirdList"></ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Website</p>
+    </footer>
+
+    <script src="./js/scores_script.js"></script>
+</body>
+</html>
