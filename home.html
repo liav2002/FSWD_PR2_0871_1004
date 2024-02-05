@@ -23,8 +23,14 @@
     </footer>
 
     <script>
-        // Retrieve username from local storage
+        // Check if loggedInUser does not exist in local storage
         const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+        if (!loggedInUser) {
+            // Redirect to index.html
+            window.location.href = './index.html';
+        }
+
+        // Retrieve username from local storage
         const users = JSON.parse(localStorage.getItem('users')) || [];
         const user = users.find(u => u.user_id === loggedInUser.user_id);
 

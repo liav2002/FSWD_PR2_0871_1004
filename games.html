@@ -38,6 +38,15 @@
     </footer>
 
     <script>
+        // Retrieve loggedInUser from local storage
+        const loggedInUserString = localStorage.getItem('loggedInUser');
+
+        // Check if loggedInUser does not exist in local storage
+        if (!loggedInUserString) {
+            // Redirect to index.html
+            window.location.href = './index.html';
+        }
+
         function navigateToGame(gamePage) {
             if (gamePage === "flappy-bird.html")
             {
