@@ -37,7 +37,8 @@ function register(){
     const users = JSON.parse(localStorage.getItem('users')) || [];
     let user = users.find(u => u.username === username && u.email === email);
     if (user===undefined ){
-        user= {"username":username,"email":email,"password":password,"block":"false"};
+        let uid = users.length;
+        user= {"user_id":uid,"username":username,"email":email,"password":password,"block":"false"};
         users.push(user);
         localStorage.setItem('users',JSON.stringify(users));
         alert(`${username} registration completed !`);
