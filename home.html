@@ -19,6 +19,7 @@
 
     <footer>
         <p>&copy; 2024 Your Website</p>
+        <button id="logoutButton">Logout</button>
     </footer>
 
     <script>
@@ -32,19 +33,22 @@
 
         // Function to navigate to another page
         function navigateTo(page) {
-            if (page === "scores.html")
-            {
+            if (page === "scores.html") {
                 alert("scores page still in develop.")
-            }
-            else if (page === "profile.html")
-            {
+            } else if (page === "profile.html") {
                 alert("profile page still in develop.")
-            }
-            else
-            {
+            } else {
                 window.location.href = page;
             }
         }
+
+        // Logout functionality
+        document.getElementById('logoutButton').addEventListener('click', () => {
+            // Clear loggedInUser from local storage
+            localStorage.removeItem('loggedInUser');
+            // Redirect to index.html after logout
+            window.location.href = './index.html';
+        });
     </script>
 </body>
 </html>
