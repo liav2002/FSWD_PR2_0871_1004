@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.score-container {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex; /* Add this line */
+    justify-content: space-between; /* Add this line for spacing between elements */
+}
+
+.score-container p {
+    margin: 0; /* Remove default margin to avoid extra spacing */
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(3, 150px); /* Adjust the column width as needed */
+    grid-template-rows: repeat(3, 100px); /* Adjust the row height as needed */
+    gap: 5px; /* Adjust the gap between cells */
+    justify-content: center; /* Center the grid horizontally */
+}
+
+.cell {
+    width: 100%; /* Adjust the width and height as needed */
+    height: 100%;
+    background-color: #ddd; /* Set the background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px; /* Adjust the font size as needed */
+    border: 1px solid #888; /* Add a border for better visibility */
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: #ccc; /* Change color on hover if desired */
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px; /* Add margin to the button for spacing */
+}
