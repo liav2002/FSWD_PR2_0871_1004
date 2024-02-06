@@ -1,0 +1,33 @@
+/* statistics_styles.css */
+
+/* Table styling */
+table {
+    margin: auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 80%;
+}
+
+thead tr {
+    background-color: rgb(244, 244, 244);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(244, 244, 244);
+}
+
+tbody tr {
+    transition: 0.2s;
+}
+
+tbody tr:hover {
+    background-color: rgb(231, 237, 240);
+}
+
