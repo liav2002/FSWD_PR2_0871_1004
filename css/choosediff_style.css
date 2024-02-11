@@ -2,13 +2,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
 }
-.difficulty-image {
+img {
     cursor: pointer;
     margin: 10px;
+    padding-bottom: 20px;
+    padding-left: 30px;
     transition: transform 0.2s; /* Animation */
 }
-.difficulty-image:hover {
+img:hover {
     transform: scale(1.1); /* Slightly enlarge the images on hover */
+}
+
+button {
+    background-color: transparent;
+    border:none;
+    font-family:fantasy;
+    color:lightskyblue;
+    font-size: large;
+}
+
+h1{
+    color:lightskyblue;
+    text-align: center;
+
 }
