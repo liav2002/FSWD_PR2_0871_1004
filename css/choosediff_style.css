@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.difficulty-image {
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.2s; /* Animation */
+}
+.difficulty-image:hover {
+    transform: scale(1.1); /* Slightly enlarge the images on hover */
+}

@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    text-align: center; /* Center inline or inline-block elements */
+    font-family: fantasy;
+}
+
+
+#gameContainer {
+    position: relative;
+    display: inline-block;
+    text-align: left; /* Reset text alignment for elements inside the container */
+}
+
+canvas {
+    display: block;
+    margin: auto;
+    width: 1280px; /* Your specified width */
+    height: 600px; /* Adjusted height */
+    background: #90ceff; /* This will be overridden by the background image */
+}
+
+#gameOverScreen {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: grey;
+    color: red;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#chooseDifficulty {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: yellowgreen;
+    color: red;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#hardselect{
+    background-color: red;
+}
+
+#regularselect{
+    background-color: skyblue;
+}
+
+
+button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: skyblue;
+}

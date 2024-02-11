@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Difficulty</title>
+    <link rel="stylesheet" href="css/choosediff_style.css">
+</head>
+<body>
+    <div class="container">
+        <button class="button" id="simpleMode">Simple Mode</button>
+        <button class="button" id="regularMode">Regular Mode</button>
+        <button class="button" id="hardMode">Hard Mode</button>
+    </div>
+
+    <script>
+        document.getElementById('simpleMode').addEventListener('click', function() {
+            window.location.href = 'flappy.html?mode=easy';
+        });
+        document.getElementById('regularMode').addEventListener('click', function() {
+            window.location.href = 'flappy.html?mode=regular';
+        });
+
+        document.getElementById('hardMode').addEventListener('click', function() {
+            window.location.href = 'flappy.html?mode=hard';
+        });
+    </script>
+</body>
+</html>

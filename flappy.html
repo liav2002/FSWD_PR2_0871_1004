@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="css/flappy_style.css">
+</head>
+<body>
+    <h1>Flappy Bird</h1>
+    <div id="gameContainer" style="position: relative; display: inline-block;">
+        <canvas id="gameCanvas"></canvas>
+        <div id="gameOverScreen">
+            <p>Game Over!</p>
+            <button id="difficulty">Choose Mode</button>
+            <button id="playAgainButton">Play Again</button>
+            <button id="quitButton">Quit</button>
+        </div>
+        <div id="chooseDifficulty">
+            <p>Choose the difficulty</p>
+            <button id="hardselect">Hard</button>
+            <button id="regularselect">Regular</button>
+        </div>
+    </div>
+
+    <script src="flappy_logic.js"></script>
+
+</body>
+</html>
