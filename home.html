@@ -1,56 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/home_styles.css">
-</head>
-<body>
-    <header>
-        <h1>Hello <span id="username"></span>!</h1>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+        <link rel="stylesheet" href="./css/home_styles.css">
+    </head>
+    <body>
+        <div id="page-cover" class="home-background">
+            <header>
+                <h1>Hello <span id="username"></span>!</h1>
+            </header>
+        
+            <nav class="menu">
+                <button onclick="navigateTo('games.html')">Games</button>
+                <button onclick="navigateTo('scores.html')">Scores</button>
+                <button onclick="navigateTo('profile.html')">Profile</button>
+                <button onclick="navigateTo('statistics.html')">Statistics</button>
+            </nav>
+        
+            <footer>
+                <button id="logoutButton">Logout</button>
+            </footer>
+        </div>
 
-    <nav class="menu">
-        <button onclick="navigateTo('games.html')">Games</button>
-        <button onclick="navigateTo('scores.html')">Scores</button>
-        <button onclick="navigateTo('profile.html')">Profile</button>
-        <button onclick="navigateTo('statistics.html')">Statistics</button>
-    </nav>
+        <script>
+            // Check if loggedInUser does not exist in local storage
+            const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+            if (!loggedInUser) {
+                // Redirect to index.html
+                window.location.href = './index.html';
+            }
 
-    <footer>
-        <p>&copy; 2024 Your Website</p>
-        <button id="logoutButton">Logout</button>
-    </footer>
+            // Retrieve username from local storage
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const user = users.find(u => u.user_id === loggedInUser.user_id);
 
-    <script>
-        // Check if loggedInUser does not exist in local storage
-        const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
-        if (!loggedInUser) {
-            // Redirect to index.html
-            window.location.href = './index.html';
-        }
+            // Update greeting message
+            document.getElementById('username').innerText = user.username;
 
-        // Retrieve username from local storage
-        const users = JSON.parse(localStorage.getItem('users')) || [];
-        const user = users.find(u => u.user_id === loggedInUser.user_id);
+            // Function to navigate to another page
+            function navigateTo(page) {
+                window.location.href = page;
+            }
 
-        // Update greeting message
-        document.getElementById('username').innerText = user.username;
-
-        // Function to navigate to another page
-        function navigateTo(page) {
-            window.location.href = page;
-        }
-
-        // Logout functionality
-        document.getElementById('logoutButton').addEventListener('click', () => {
-            // Clear loggedInUser from local storage
-            localStorage.removeItem('loggedInUser');
-            // Redirect to index.html after logout
-            window.location.href = './index.html';
-        });
-    </script>
-</body>
+            // Logout functionality
+            document.getElementById('logoutButton').addEventListener('click', () => {
+                // Clear loggedInUser from local storage
+                localStorage.removeItem('loggedInUser');
+                // Redirect to index.html after logout
+                window.location.href = './index.html';
+            });
+        </script>
+    </body>
 </html>
