@@ -6,25 +6,29 @@
     <title>Register Page</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/register_styles.css">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap"> -->
 </head>
 <body>
-    <div id="register-container">
-        <h2>Register</h2>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-
-        <label for="confirm-password">Confirm Password:</label>
-        <input type="password" id="confirm-password" name="confirm-password" required>
-
-        <button onclick="register()">Register</button>
-
-        <p class="login-message">Already have an account? <a href="./index.html">Login here</a>.</p>
+    <div id="page-cover" class="background">
+        <h1 class="title">Games4Geeks</h1> 
+        <div id="register-container" class="register-background">
+            <h2>Register</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+    
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+    
+            <button onclick="register()">Register</button>
+    
+            <p class="login-message">Already have an account? <a href="./index.html">Login here</a>.</p>
+        </div>
     </div>
 
     <script src="./js/register_script.js"></script>
