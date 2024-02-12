@@ -1,13 +1,3 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-}
-
-
 label {
     display: block;
     margin-bottom: 8px;
@@ -41,18 +31,6 @@ button {
     font-weight: bold;
 }
 
-.signup-message {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-}
-
-.signup-message a {
-    text-decoration: none;
-    color: #3498db;
-    font-weight: bold;
-}
-
 .login-message {
     text-align: center;
     margin-top: 20px;
@@ -72,4 +50,18 @@ button {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     width: 100%;
+    margin: auto; 
+}
+
+.register-background {
+    background-color: #0c0c0c; 
+    background-size: cover;
+    background-position: center;
+    color: #fff; 
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px; 
+    margin-bottom: -75px; /* Add margin-top to push it below the top */
 }
