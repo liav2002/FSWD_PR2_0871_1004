@@ -65,13 +65,8 @@ button {
 }
 
 .login-background {
-    background-color: #0c0c0c; /* Cyber background color */
-    background-image: url('path/to/background-image.jpg'); /* Cyber background image */
+    background-color: #0c0c0c; 
     background-size: cover;
     background-position: center;
-    color: #fff; /* Set text color to white for better visibility */
+    color: #fff; 
 }
-
-
-
-/* Add more styles as needed */

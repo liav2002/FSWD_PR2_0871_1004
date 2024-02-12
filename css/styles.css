@@ -15,17 +15,7 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
 }
 
-.background-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Place behind other elements */
+.background {
+    background-color: black; /* Set initial background color */
 }
 
-.background {
-    background-color: rgba(105, 85, 85, 0.5); /* Semi-transparent background */
-    transition: background-color 0.3s; /* Smooth transition effect */
-}
-/* Add more styles as needed */

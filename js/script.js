@@ -13,13 +13,14 @@ function is_anyone_logged_in() {
     }
 }
 
-// Call the function to fetch and store data when needed
-is_anyone_logged_in();
+// document.addEventListener('mousemove', function(event) {
+//     const x = event.clientX / window.innerWidth;
+//     const y = event.clientY / window.innerHeight;
+//     const color = 'rgb(' + (x * 255) + ',' + (y * 255) + ',150)';
+//     document.body.style.backgroundColor = color;
+// });
 
-document.addEventListener('mousemove', function(event) {
-    const x = event.clientX / window.innerWidth;
-    const y = event.clientY / window.innerHeight;
-    const color = 'rgb(' + (x * 255) + ',' + (y * 255) + ',150)';
-    document.body.style.backgroundColor = color;
+document.addEventListener('DOMContentLoaded', function () {
+    // Call the function to fetch and store data when needed
+    is_anyone_logged_in();
 });
-
