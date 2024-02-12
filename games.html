@@ -28,7 +28,7 @@
             <button>Play Now</button>
         </div>
 
-        <div class="game-card" onclick="navigateToGame('flappy-bird.html')">
+        <div class="game-card" onclick="navigateToGame('selectFlappyDifficulty.html')">
             <img src="./images/icons/flappy.png" alt="Flappy Bird Icon">
             <h2>Flappy Bird</h2>
             <button>Play Now</button>
@@ -60,7 +60,7 @@
         function navigateToGame(gamePage) {
             if (gamePage === "flappy-bird.html")
             {
-                alert("flappy bird still in develop.")
+                window.localStorage.href =gamePage;
             }
             else if (gamePage === "memory-game.html")
             {
