@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // #region Constants
   const gravity = 0.25;
-  const pipeFrequency = 900; // in ms, to control pipe appearance speed
+  let pipeFrequency = 1000; // in ms, to control pipe appearance speed
   let pipes = [];
   const TEXT_COLOR = 'white';
   const windWidth = 1280;
@@ -20,21 +20,21 @@ document.addEventListener('DOMContentLoaded', function() {
   // #endregion
 
   //#region Game Sound
-  const flapSound = new Audio('audio/flapsound.mp3');
-  const backgroundMusic = new Audio('audio/backsound.mp3');
+  const flapSound = new Audio('./audio/flapsound.mp3');
+  const backgroundMusic = new Audio('./audio/backsound.mp3');
   backgroundMusic.loop = true;
-  const crashSound = new Audio('audio/crashsound.mp3');
+  const crashSound = new Audio('./audio/crashsound.mp3');
   //#endregion
 
   // #region Game Assets
   const bird_img = new Image();
-  bird_img.src = 'images/bird.png';
+  bird_img.src = './images/bird.png';
   const top_p_img = new Image();
-  top_p_img.src = 'images/pipe_top.png'; 
+  top_p_img.src = './images/pipe_top.png'; 
   const bottom_p_img = new Image();
-  bottom_p_img.src = 'images/pipe_bottom.png';
+  bottom_p_img.src = './images/pipe_bottom.png';
   const  bg_img = new Image();
-  bg_img.src = 'images/back.png';
+  bg_img.src = './images/back.png';
   // #endregion
   
   // Authentication and score handling
@@ -151,10 +151,13 @@ document.addEventListener('DOMContentLoaded', function() {
         this.bird = new Bird();
         this.score = 0;
         this.start = true;
+        this.pipeFreq = pipeFrequency;
         this.lastPipe = Date.now() - pipeFrequency;
         this.loop = this.loop.bind(this);
         this.hard = false;
         this.easy = false;
+        this.speed = 3.5;
+        this.target = 5;
     }
 
     drawText(text, x, y) {
@@ -181,25 +184,37 @@ document.addEventListener('DOMContentLoaded', function() {
         ctx.clearRect(0, 0, windWidth, windHeight);
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.drawImage(bg_img, 0, 0, canvas.width, canvas.height);
+        
 
         if (!this.gameOver && !this.start) {
             this.bird.position();
             const now = Date.now();
-
-            if (now - this.lastPipe > pipeFrequency) {
+            this.pipeFreq = Math.floor(Math.random() * (3000 - 600 + 1)) + 600;
+            if (now - this.lastPipe > this.pipeFreq) {
                 const pipeHeight = Math.floor(Math.random() * (150 + 1) + 200);
                 let pipe_gap = (this.hard)? 110:150;
                 if(this.easy) {pipe_gap = 190;}
                 pipes.push(new Pipes(pipeHeight,pipe_gap));
                 this.lastPipe = now;
-            }
 
+            }
+            if(this.target<=50){
+                if(this.score>=this.target){
+                    this.speed +=0.3;
+                    this.target+=5;
+               }
+            }
             pipes.forEach(pipe => {
-                pipe.move(5);
+                pipe.move(this.speed);
                 if (!pipe.scored && pipe.x + pipe.width < this.bird.x) {
-                  this.score++;
                   if(this.hard){
+                    this.score+=3;
+                  }
+                  else if(this.easy){
                     this.score++;
+                  }
+                  else{
+                    this.score+=2;
                   }
                   pipe.scored = true;
               }
@@ -240,6 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
         this.score = 0;
         this.start = true;
         this.gameOver = false;
+        this.pipeFreq =pipeFrequency;
         this.lastPipe = Date.now() - pipeFrequency;
         gameOverScreen.style.display = 'none';
         backgroundMusic.play();
