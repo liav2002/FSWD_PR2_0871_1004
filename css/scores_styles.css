@@ -1,3 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.scores-container {
+    margin-bottom: 193.8px; /* Add space at the bottom */
+}
+
+#page-cover {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+.scores-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/background/home_background.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+nav {
+    margin-bottom: 20px; /* Add space between header and navigation */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Set link color */
+    font-size: 20px;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+nav ul li a:hover {
+    color: #0c8d1b; /* Change link color on hover */
+}
+
+h2 {
+    margin-bottom: 20px; /* Add space below section headings */
+}
+
+.scores-list li {
+    background-color: #333; /* Background color */
+    padding: 10px; /* Padding */
+    margin-bottom: 10px; /* Margin bottom to create space between list items */
+    border-radius: 5px; /* Border radius for rounded corners */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2); /* Box shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.scores-list li:hover {
+    background-color: #444; /* Darker background color on hover */
+}
+
+#logoutButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #dc3545;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#logoutButton:hover {
+    background-color: #c82333;
+}
+
+
 .tabs {
     display: flex;
     justify-content: center;
@@ -33,21 +124,3 @@ button {
     display: none;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
