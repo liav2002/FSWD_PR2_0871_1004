@@ -1,4 +1,64 @@
-/* statistics_styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.statistics-container {
+    margin-bottom: 173px; /* Add space at the bottom */
+}
+
+#page-cover {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+.statistics-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/background/home_background.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+nav {
+    margin-bottom: 20px; /* Add space between header and navigation */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Set link color */
+    font-size: 20px;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+nav ul li a:hover {
+    color: #0c8d1b; /* Change link color on hover */
+}
+
+h2 {
+    margin-bottom: 20px; /* Add space below section headings */
+}
 
 /* Table styling */
 table {
@@ -20,7 +80,7 @@ th, td {
 }
 
 tr:nth-child(even) {
-    background-color: rgb(244, 244, 244);
+    background-color: rgb(82, 4, 73);
 }
 
 tbody tr {
@@ -28,6 +88,20 @@ tbody tr {
 }
 
 tbody tr:hover {
-    background-color: rgb(231, 237, 240);
+    background-color: #0c8d1b;
 }
 
+#logoutButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #dc3545;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#logoutButton:hover {
+    background-color: #c82333;
+}
