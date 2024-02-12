@@ -28,13 +28,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // #region Game Assets
   const bird_img = new Image();
-  bird_img.src = './images/bird.png';
+  bird_img.src = './images/flappy/bird.png';
   const top_p_img = new Image();
-  top_p_img.src = './images/pipe_top.png'; 
+  top_p_img.src = './images/flappy/pipe_top.png'; 
   const bottom_p_img = new Image();
-  bottom_p_img.src = './images/pipe_bottom.png';
+  bottom_p_img.src = './images/flappy/pipe_bottom.png';
   const  bg_img = new Image();
-  bg_img.src = './images/back.png';
+  bg_img.src = './images/flappy/back.png';
   // #endregion
   
   // Authentication and score handling

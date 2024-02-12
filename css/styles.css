@@ -22,7 +22,7 @@ body {
     position: fixed; /* Changed from 'relative' to 'fixed' */
     width: 100%;
     height: 100%;
-    background-image: url('../images/game_back.gif');
+    background-image: url('../images/background/game_back.gif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; /* Ensure the image does not repeat */
