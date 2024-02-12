@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // #region Constants
   const gravity = 0.25;
-  const pipeFrequency = 600; // in ms, to control pipe appearance speed
+  const pipeFrequency = 900; // in ms, to control pipe appearance speed
   let pipes = [];
   const TEXT_COLOR = 'white';
   const windWidth = 1280;
@@ -46,12 +46,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const loggedInUserId = loggedInUser.user_id;
 
     // Initialize or load scores
-    const scores = JSON.parse(localStorage.getItem('flappyScores')) || [];
+    const scores = JSON.parse(localStorage.getItem('scores')) || [];
     let userScoreIndex = scores.findIndex(score => score.user_id === loggedInUserId);
     if (userScoreIndex === -1) {
-        scores.push({ user_id: loggedInUserId, bestScore: 0 });
-        userScoreIndex = scores.length - 1;
+        // User record not found, initialize a new one
+        const newUserScore = { user_id: loggedInUserId, flappy_score: 0 };
+
+        // Save the new user score to the scores array
+        scores.push(newUserScore);
+
+        // Update user's score index
+        userScoreIndex = scores.findIndex(score => score.user_id === loggedInUserId);
+    } else {
+        // User record found, ensure flappy_score is present
+        if (!scores[userScoreIndex].hasOwnProperty('flappy_score')) {
+            scores[userScoreIndex].flappy_score = 0;
+        }
     }
+
+    // Save updated scores to local storage
+    localStorage.setItem('scores', JSON.stringify(scores));
 
     const h1 = document.querySelector('h1');
     const bestScoreContainer = document.createElement('div');
@@ -65,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Display existing best score
     const bestScoreSpan = document.getElementById('bestScore');
-    bestScoreSpan.textContent = scores[userScoreIndex].bestScore;
+    bestScoreSpan.textContent = scores[userScoreIndex].flappy_score;
 
   class Bird {
       constructor() {
@@ -233,9 +247,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     showGameOverScreen() {
-      if (this.score > scores[userScoreIndex].bestScore) {
-        scores[userScoreIndex].bestScore = this.score;
-        localStorage.setItem('flappyScores', JSON.stringify(scores)); 
+      if (this.score > scores[userScoreIndex].flappy_score) {
+        scores[userScoreIndex].flappy_score = this.score;
+        localStorage.setItem('scores', JSON.stringify(scores)); 
         bestScoreSpan.textContent = this.score; 
       }
 
