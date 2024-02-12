@@ -4,23 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/login_styles.css">
 </head>
-<body class="background"> <!-- Apply background color to the body -->
-    <div class="background-overlay"></div>
-    <h1 class="title">Games4Geeks</h1> <!-- Title outside of the login-container -->
-    <div id="login-container" class="login-background">
-        <h2>Login</h2>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+<body > <!-- Apply background color to the body -->
+    <div id="page-cover" class="background">
+        <h1 class="title">Games4Geeks</h1> <!-- Title outside of the login-container -->
+        <div id="login-container" class="login-background">
+            <h2>Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
 
-        <button onclick="login()">Login</button>
+            <button onclick="login()">Login</button>
 
-        <p class="signup-message">Don't have an account? <a href="./register.html">Sign up here</a>.</p>
+            <p class="signup-message">Don't have an account? <a href="./register.html">Sign up here</a>.</p>
+        </div>
     </div>
 
     <script src="./js/script.js"></script>
