@@ -7,10 +7,22 @@ document.addEventListener('DOMContentLoaded', function () {
         const user = users.find(u => u.user_id === loggedInUser.user_id);
         if (user) {
             const userDetails = `
-                <p><strong>User ID:</strong> ${user.user_id}</p>
-                <p><strong>Username:</strong> ${user.username}</p>
-                <p><strong>Email:</strong> ${user.email}</p>
-                <p><strong>Last Login:</strong> ${loggedInUser['date-last-login']}</p>
+                <div class="profile-detail">
+                    <label>User ID:</label>
+                    <span>${user.user_id}</span>
+                </div>
+                <div class="profile-detail">
+                    <label>Username:</label>
+                    <span>${user.username}</span>
+                </div>
+                <div class="profile-detail">
+                    <label>Email:</label>
+                    <span>${user.email}</span>
+                </div>
+                <div class="profile-detail">
+                    <label>Last Login:</label>
+                    <span>${loggedInUser['date-last-login']}</span>
+                </div>
             `;
             profileDetails.innerHTML = userDetails;
         } else {
@@ -19,4 +31,12 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         profileDetails.innerHTML = '<p>User details not available.</p>';
     }
+});
+
+ // Logout functionality
+ document.getElementById('logoutButton').addEventListener('click', () => {
+    // Clear loggedInUser from local storage
+    localStorage.removeItem('loggedInUser');
+    // Redirect to index.html after logout
+    window.location.href = './index.html';
 });

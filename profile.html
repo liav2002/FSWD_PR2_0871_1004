@@ -5,34 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
     <link rel="icon" href="./images/icons/g4g_icon.png">
-    <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/profile_styles.css">
 </head>
 <body>
-    <header>
-        <h1>User Profile</h1>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="./home.html">Home</a></li>
-            <li><a href="./games.html">Games</a></li>
-            <li><a href="./scores.html">Scores</a></li>
-            <li><a href="./statistics.html">Statistics</a></li>
-        </ul>
-    </nav>
-
-    <section id="profile-section">
-        <h2>User Details</h2>
-        <div id="profile-details">
-            <!-- User details will be dynamically added here -->
+    <div id="page-cover" class="profile-background">
+        <div id="profileContainer" class="profile-container">
+            <header>
+                <h1>User Profile</h1>
+            </header>
+        
+            <nav>
+                <ul>
+                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="./games.html">Games</a></li>
+                    <li><a href="./scores.html">Scores</a></li>
+                    <li><a href="./statistics.html">Statistics</a></li>
+                </ul>
+            </nav>
+        
+            <section id="profile-section">
+                <h2>User Details</h2>
+                <div id="profile-details">
+                    <!-- User details will be dynamically added here -->
+                </div>
+            </section>
         </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Your Website</p>
-    </footer>
-
+        <footer>
+            <button id="logoutButton">Logout</button>
+        </footer>
+    </div>
     <script src="./js/profile_script.js"></script>
 </body>
 </html>
