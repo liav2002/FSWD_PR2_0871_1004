@@ -80,7 +80,7 @@ h2 {
     color: #fff;
     border-radius: 8px;
     cursor: pointer;
-    position: fixed;
+    position:absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);

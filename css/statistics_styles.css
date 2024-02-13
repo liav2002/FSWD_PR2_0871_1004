@@ -95,7 +95,7 @@ tbody tr:hover {
     color: #fff;
     border-radius: 8px;
     cursor: pointer;
-    position: fixed;
+    position:absolute;
     bottom: 31.5px;
     left: 50%;
     transform: translateX(-50%);

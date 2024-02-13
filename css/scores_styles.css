@@ -77,7 +77,7 @@ h2 {
     color: #fff;
     border-radius: 8px;
     cursor: pointer;
-    position: fixed;
+    position:absolute;
     bottom: 30px;
     left: 49.35%;
     transform: translateX(-50%);
