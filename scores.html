@@ -4,48 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leaderboard - Scores</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="./images/icons/g4g_icon.png">
     <link rel="stylesheet" href="./css/scores_styles.css">
 </head>
 <body>
-    <header>
-        <h1>Leaderboard - Scores</h1>
-    </header>
+    <div id="page-cover" class="scores-background">
+        <div id="scoresContainer" class="scores-container">
+            <header>
+                <h1>Leaderboard - Scores</h1>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="./games.html">Games</a></li>
+                    <li><a href="./profile.html">Profile</a></li>
+                    <li><a href="./statistics.html">Statistics</a></li>
+                </ul>
+            </nav>
+            <div class="tabs" id="tabs">
+                <button id="totalPointsButton" onclick="showTab('totalPoints')">Total Points</button>
+                <button id="ticTacToeButton" onclick="showTab('ticTacToe')">Tic Tac Toe Scores</button>
+                <button id="flappyBirdButton" onclick="showTab('flappyBird')">Flappy Bird Scores</button>
+            </div> 
+            <div id="totalPointsTab" class="scores-list">
+                <h2>Total Points</h2>
+                <ul id="totalPointsList"></ul>
+            </div>
+            <div id="ticTacToeTab" class="scores-list">
+                <h2>Tic Tac Toe Scores</h2>
+                <ul id="ticTacToeList"></ul>
+            </div>
+            <div id="flappyBirdTab" class="scores-list">
+                <h2>Flappy Bird Scores</h2>
+                <ul id="flappyBirdList"></ul>
+            </div>
+        </div>
 
-    <nav>
-        <ul>
-            <li><a href="./home.html">Home</a></li>
-            <li><a href="./games.html">Games</a></li>
-            <li><a href="./profile.html">Profile</a></li>
-            <li><a href="./statistics.html">Statistics</a></li>
-        </ul>
-    </nav>
-
-    <div class="tabs" id="tabs">
-        <button id="totalPointsButton" onclick="showTab('totalPoints')">Total Points</button>
-        <button id="ticTacToeButton" onclick="showTab('ticTacToe')">Tic Tac Toe Scores</button>
-        <button id="flappyBirdButton" onclick="showTab('flappyBird')">Flappy Bird Scores</button>
+        <button id="logoutButton">Logout</button>
     </div>
-
-    <div id="totalPointsTab" class="scores-list">
-        <h2>Total Points</h2>
-        <ul id="totalPointsList"></ul>
-    </div>
-
-    <div id="ticTacToeTab" class="scores-list">
-        <h2>Tic Tac Toe Scores</h2>
-        <ul id="ticTacToeList"></ul>
-    </div>
-
-    <div id="flappyBirdTab" class="scores-list">
-        <h2>Flappy Bird Scores</h2>
-        <ul id="flappyBirdList"></ul>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Your Website</p>
-    </footer>
-
     <script src="./js/scores_script.js"></script>
 </body>
 </html>

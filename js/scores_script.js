@@ -31,12 +31,15 @@ function displayTotalPoints() {
     totalPointsList.innerHTML = '';
 
     users.forEach(user => {
-        const userScore = scores.find(score => score.user_id === user.user_id);
-        const totalPoints = userScore ? calculateTotalPoints(userScore) : 0;
-
-        const listItem = document.createElement('li');
-        listItem.innerText = `${user.username}: ${totalPoints} points`;
-        totalPointsList.appendChild(listItem);
+        if (user.block == "false")
+        {
+            const userScore = scores.find(score => score.user_id === user.user_id);
+            const totalPoints = userScore ? calculateTotalPoints(userScore) : 0;
+    
+            const listItem = document.createElement('li');
+            listItem.innerText = `${user.username}: ${totalPoints} points`;
+            totalPointsList.appendChild(listItem);
+        }
     });
 
     // Sort the list by points in descending order
@@ -52,21 +55,24 @@ function displayGameScores(gameKey) {
     gameScoresList.innerHTML = '';
 
     users.forEach(user => {
-        const userScore = scores.find(score => score.user_id === user.user_id);
-        let gameScore = 0;
-
-        // Try to retrived the relevant score
-        if (userScore) {
-            if (gameKey === "ticTacToe" && userScore.hasOwnProperty("tictactoe_score")) {
-                gameScore = userScore.tictactoe_score;
-            } else if (gameKey === "flappyBird" && userScore.hasOwnProperty("flappy_score")) {
-                gameScore = userScore.flappy_score;
+        if (user.block == "false")
+        {
+            const userScore = scores.find(score => score.user_id === user.user_id);
+            let gameScore = 0;
+    
+            // Try to retrived the relevant score
+            if (userScore) {
+                if (gameKey === "ticTacToe" && userScore.hasOwnProperty("tictactoe_score")) {
+                    gameScore = userScore.tictactoe_score;
+                } else if (gameKey === "flappyBird" && userScore.hasOwnProperty("flappy_score")) {
+                    gameScore = userScore.flappy_score;
+                }
             }
+    
+            const listItem = document.createElement('li');
+            listItem.innerText = `${user.username}: ${gameScore} points`;
+            gameScoresList.appendChild(listItem);
         }
-
-        const listItem = document.createElement('li');
-        listItem.innerText = `${user.username}: ${gameScore} points`;
-        gameScoresList.appendChild(listItem);
     });
 
     // Sort the list by points in descending order
@@ -110,4 +116,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     showTab('totalPoints'); // Show the default tab
+});
+
+ // Logout functionality
+ document.getElementById('logoutButton').addEventListener('click', () => {
+    // Clear loggedInUser from local storage
+    localStorage.removeItem('loggedInUser');
+    // Redirect to index.html after logout
+    window.location.href = './index.html';
 });

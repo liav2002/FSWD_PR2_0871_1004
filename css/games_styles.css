@@ -1,20 +1,77 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+#page-cover {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+.games-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/background/home_background.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+nav {
+    margin-bottom: 20px; /* Add space between header and navigation */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Set link color */
+    font-size: 20px;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+nav ul li a:hover {
+    color: #0c8d1b; /* Change link color on hover */
+}
+
+.game-container {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    margin-bottom: 264px; /* Add space at the bottom */
+}
+
 .game-cards {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Prevent wrapping */
     padding: 20px;
 }
 
 .game-card {
-    border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 250px;
     margin: 10px;
     padding: 20px;
     text-align: center;
-    cursor: pointer;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -28,12 +85,63 @@
     margin-bottom: 10px;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
+.game-card h2 {
+    color: #fff; /* Set game name color */
+    margin-bottom: 10px; /* Add space below game name */
+}
+
+/* Style for the rolling line */
+.game-container::after {
+    content: "";
+    display: block;
+    position: absolute;
     bottom: 0;
+    left: 0;
     width: 100%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white color */
+}
+
+/* Style for the scroll bar */
+.game-container::-webkit-scrollbar {
+    width: 10px;
+    background-color: #000000; /* Purple color */
+    border-radius: 10px;
+}
+
+/* Handle for the scrollbar */
+.game-container::-webkit-scrollbar-thumb {
+    background-color: #c70ba8; /* Dark purple color */
+    border-radius: 10px;
+}
+
+/* Style for the Play Now button */
+.game-card button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0c8d1b; /* Green color */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.game-card button:hover {
+    background-color: #006b13; /* Darker shade of green on hover */
+}
+
+#logoutButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #dc3545;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#logoutButton:hover {
+    background-color: #c82333;
 }
