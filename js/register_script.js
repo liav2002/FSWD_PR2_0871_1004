@@ -8,10 +8,15 @@ function check_password(password, confirm_password){
 }
 
 function check_validity(field){
-    if(field.length < 5) {
+    if(field.length < 4) {
         return false;
     }
     return true;
+}
+
+function check_mail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
 }
 
 function register(){
@@ -24,7 +29,7 @@ function register(){
 
     const email = document.getElementById('email').value;
     const email_check = check_validity(email);
-    if(!email_check){
+    if(!(email_check && check_mail(email))){
         alert("Email address is not valid.");
         return;
     }
