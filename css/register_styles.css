@@ -63,5 +63,5 @@ button {
 .title {
     text-align: center;
     margin-top: 20px; 
-    margin-bottom: -75px; /* Add margin-top to push it below the top */
+    margin-bottom: -75px; 
 }
