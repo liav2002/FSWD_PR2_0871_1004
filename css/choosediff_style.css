@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.flappy-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/background/home_background.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+img {
+    cursor: pointer;
+    margin: 10px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    transition: transform 0.2s;
+}
+img:hover {
+    transform: scale(1.1); 
+}
+
+button {
+    background-color: transparent;
+    border:none;
+    font-family:fantasy;
+    color:lightskyblue;
+    font-size: large;
+}
+
+h1{
+    color:#4caf50;
+    text-align: center;
+
+}

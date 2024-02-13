@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+#page-cover {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+.scores-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/background/home_background.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; 
+    font-size: 20px;
+    transition: color 0.3s ease; 
+}
+
+nav ul li a:hover {
+    color: #0c8d1b; 
+}
+
+h2 {
+    margin-bottom: 20px; 
+}
+
+.scores-list li {
+    background-color: #333; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    border-radius: 5px; 
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2); 
+    transition: background-color 0.3s ease; 
+}
+
+.scores-list li:hover {
+    background-color: #444; 
+}
+
+#logoutButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #dc3545;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    position:absolute;
+    bottom: 30px;
+    left: 49.35%;
+    transform: translateX(-50%);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#logoutButton:hover {
+    background-color: #c82333;
+}
+
+#logoutButton:hover {
+    background-color: #c82333;
+}
+
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.tabs button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.tabs button:hover {
+    background-color: #45a049;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.tab {
+    display: none;
+}
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Difficulty</title>
+    <link rel="icon" href="../images/icons/g4g_icon.png">
+    <link rel="stylesheet" href="../css/choosediff_style.css">
+</head>
+<body>
+    <div id="page-cover" class="flappy-background">
+        <h1>Flappy Bird Mode Selection</h1>
+        <div class="container">
+            <button class="button" id="simpleMode"><img src="../images/flappy/flappy_simple.jpg" alt="Le S"><br>Simple Mode</button>
+            <button class="button" id="regularMode"><img src="../images/flappy/flappy_regular.jpg" alt="Le R"><br>Regular Mode</button>
+            <button class="button" id="hardMode"><img src="../images/flappy/flappy_hard.jpg" alt="Le Sang"><br>Hard Mode</button>
+        </div>
+    </div>
+
+    <script>
+        // Retrieve loggedInUser from local storage
+        const loggedInUserString = localStorage.getItem('loggedInUser');
+
+        // Check if loggedInUser does not exist in local storage
+        if (!loggedInUserString) {
+            window.location.href = '../index.html';
+        }
+
+        document.getElementById('simpleMode').addEventListener('click', function() {
+            window.location.href = '../html/flappy.html?mode=easy';
+        });
+        document.getElementById('regularMode').addEventListener('click', function() {
+            window.location.href = '../html/flappy.html?mode=regular';
+        });
+
+        document.getElementById('hardMode').addEventListener('click', function() {
+            window.location.href = '../html/flappy.html?mode=hard';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+#page-cover {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+.statistics-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/background/home_background.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease; 
+}
+
+nav ul li a:hover {
+    color: #0c8d1b; 
+}
+
+h2 {
+    margin-bottom: 20px; 
+}
+
+/* Table styling */
+table {
+    margin: auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 80%;
+}
+
+thead tr {
+    background-color: rgb(244, 244, 244);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(82, 4, 73);
+}
+
+tbody tr {
+    transition: 0.2s;
+}
+
+tbody tr:hover {
+    background-color: #0c8d1b;
+}
+
+#logoutButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #dc3545;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    position:absolute;
+    bottom: 31.5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#logoutButton:hover {
+    background-color: #c82333;
+}
