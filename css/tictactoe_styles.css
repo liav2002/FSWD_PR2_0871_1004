@@ -10,14 +10,27 @@ body {
 
 .container {
     text-align: center;
+    position:absolute;
+    margin-bottom: 200px ;
+}
+
+.game-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/background/home_background.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
 }
 
 h1 {
-    color: #333;
+    color: rgb(167, 10, 148);
 }
 
 .score-container {
-    background-color: #fff;
+    background-color: rgb(144, 7, 128);
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 8px;
@@ -62,4 +75,24 @@ button {
     border-radius: 4px;
     cursor: pointer;
     margin-top: 10px; /* Add margin to the button for spacing */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover, #reset-button:hover {
+    background-color: #347836;
+    color: #ffff;
+}
+
+.home-button {
+    background-color: #bd129b;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.home-button:hover {
+    background-color: #8b0d72;
+    color: #ffff;
 }
