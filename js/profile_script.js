@@ -35,8 +35,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
  // Logout functionality
  document.getElementById('logoutButton').addEventListener('click', () => {
-    // Clear loggedInUser from local storage
     localStorage.removeItem('loggedInUser');
-    // Redirect to index.html after logout
     window.location.href = './index.html';
 });

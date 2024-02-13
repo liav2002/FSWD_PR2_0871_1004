@@ -28,7 +28,7 @@ body {
 }
 
 nav {
-    margin-bottom: 20px; /* Add space between header and navigation */
+    margin-bottom: 20px; 
 }
 
 nav ul {
@@ -43,25 +43,25 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #fff; /* Set link color */
+    color: #fff; 
     font-size: 20px;
-    transition: color 0.3s ease; /* Smooth color transition on hover */
+    transition: color 0.3s ease; 
 }
 
 nav ul li a:hover {
-    color: #0c8d1b; /* Change link color on hover */
+    color: #0c8d1b; 
 }
 
 #profile-section {
-    margin-top: 50px; /* Add space between navigation and profile section */
+    margin-top: 50px; 
 }
 
 h2 {
-    margin-bottom: 20px; /* Add space below section headings */
+    margin-bottom: 20px; 
 }
 
 .profile-detail {
-    margin-bottom: 15px; /* Add space between profile details */
+    margin-bottom: 15px; 
 }
 
 .profile-detail label {

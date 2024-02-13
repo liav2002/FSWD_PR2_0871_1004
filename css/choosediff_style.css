@@ -21,10 +21,10 @@ img {
     margin: 10px;
     padding-bottom: 20px;
     padding-left: 30px;
-    transition: transform 0.2s; /* Animation */
+    transition: transform 0.2s;
 }
 img:hover {
-    transform: scale(1.1); /* Slightly enlarge the images on hover */
+    transform: scale(1.1); 
 }
 
 button {

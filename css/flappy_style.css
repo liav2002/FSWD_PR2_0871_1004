@@ -1,26 +1,26 @@
 body {
     background-color: rgb(0, 0, 0);
     margin: 0;
-    text-align: center; /* Center inline or inline-block elements */
+    text-align: center;
     font-family: fantasy;
 }
 
 #gameContainer {
     position: relative;
     display: inline-block;
-    text-align: left; /* Reset text alignment for elements inside the container */
+    text-align: left; 
 }
 
 canvas {
     display: block;
     margin: auto;
-    width: 1500px; /* Your specified width */
-    height: 600px; /* Adjusted height */
-    background: #90ceff; /* This will be overridden by the background image */
+    width: 1500px; 
+    height: 600px;
+    background: #90ceff; 
 }
 
 #gameOverScreen {
-    display: none; /* Initially hidden */
+    display: none; 
     position: absolute;
     top: 50%;
     left: 50%;
@@ -33,7 +33,7 @@ canvas {
 }
 
 #chooseDifficulty {
-    display: none; /* Initially hidden */
+    display: none; 
     position: absolute;
     top: 50%;
     left: 50%;

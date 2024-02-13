@@ -1,4 +1,3 @@
-/* Resetting default margin and padding */
 * {
     margin: 0;
     padding: 0;
@@ -45,7 +44,7 @@ button {
     padding: 15px 30px;
     font-size: 20px;
     border: none;
-    background-color: #38347e; /* Green color */
+    background-color: #38347e;
     color: #fff;
     cursor: pointer;
     border-radius: 8px;
@@ -53,7 +52,7 @@ button {
 }
 
 button:hover {
-    background-color: #09180c; /* Darker shade of green on hover */
+    background-color: #09180c;
 }
 
 footer {

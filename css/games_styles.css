@@ -1,4 +1,3 @@
-/* Resetting default margin and padding */
 * {
     margin: 0;
     padding: 0;
@@ -29,7 +28,7 @@ body {
 }
 
 nav {
-    margin-bottom: 20px; /* Add space between header and navigation */
+    margin-bottom: 20px;
 }
 
 nav ul {
@@ -44,23 +43,23 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #fff; /* Set link color */
+    color: #fff; 
     font-size: 20px;
-    transition: color 0.3s ease; /* Smooth color transition on hover */
+    transition: color 0.3s ease; 
 }
 
 nav ul li a:hover {
-    color: #0c8d1b; /* Change link color on hover */
+    color: #0c8d1b;
 }
 
 .game-container {
     display: flex;
-    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-x: auto; 
 }
 
 .game-cards {
     display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping */
+    flex-wrap: nowrap; 
     padding: 20px;
 }
 
@@ -85,11 +84,10 @@ nav ul li a:hover {
 }
 
 .game-card h2 {
-    color: #fff; /* Set game name color */
-    margin-bottom: 10px; /* Add space below game name */
+    color: #fff; 
+    margin-bottom: 10px; 
 }
 
-/* Style for the rolling line */
 .game-container::after {
     content: "";
     display: block;
@@ -98,27 +96,24 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white color */
+    background-color: rgba(255, 255, 255, 0.5); 
 }
 
-/* Style for the scroll bar */
 .game-container::-webkit-scrollbar {
     width: 10px;
-    background-color: #000000; /* Purple color */
+    background-color: #000000;
     border-radius: 10px;
 }
 
-/* Handle for the scrollbar */
 .game-container::-webkit-scrollbar-thumb {
-    background-color: #c70ba8; /* Dark purple color */
+    background-color: #c70ba8; 
     border-radius: 10px;
 }
 
-/* Style for the Play Now button */
 .game-card button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #0c8d1b; /* Green color */
+    background-color: #0c8d1b;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -127,7 +122,7 @@ nav ul li a:hover {
 }
 
 .game-card button:hover {
-    background-color: #006b13; /* Darker shade of green on hover */
+    background-color: #006b13; 
 }
 
 #logoutButton {

@@ -97,12 +97,9 @@
         </div>
 
         <script>
-            // Retrieve loggedInUser from local storage
             const loggedInUserString = localStorage.getItem('loggedInUser');
 
-            // Check if loggedInUser does not exist in local storage
             if (!loggedInUserString) {
-                // Redirect to index.html
                 window.location.href = './index.html';
             }
 
@@ -116,17 +113,13 @@
 
             // Add event listener for mouse wheel scrolling
             document.getElementById('gameContainer').addEventListener('wheel', (event) => {
-                // Determine the direction of the scroll
                 const direction = Math.sign(event.deltaY);
-                // Scroll the game container horizontally
-                document.getElementById('gameContainer').scrollLeft += direction * 40; // Adjust scroll speed as needed
+                document.getElementById('gameContainer').scrollLeft += direction * 40; 
             });
 
             // Logout functionality
             document.getElementById('logoutButton').addEventListener('click', () => {
-                // Clear loggedInUser from local storage
                 localStorage.removeItem('loggedInUser');
-                // Redirect to index.html after logout
                 window.location.href = './index.html';
             });
         </script>

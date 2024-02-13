@@ -29,7 +29,6 @@
             // Check if loggedInUser does not exist in local storage
             const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
             if (!loggedInUser) {
-                // Redirect to index.html
                 window.location.href = './index.html';
             }
 
@@ -37,19 +36,16 @@
             const users = JSON.parse(localStorage.getItem('users')) || [];
             const user = users.find(u => u.user_id === loggedInUser.user_id);
 
-            // Update greeting message
+            // Update "hello message"
             document.getElementById('username').innerText = user.username;
 
-            // Function to navigate to another page
             function navigateTo(page) {
                 window.location.href = page;
             }
 
-            // Logout functionality
+            // Logout Button Clicked
             document.getElementById('logoutButton').addEventListener('click', () => {
-                // Clear loggedInUser from local storage
                 localStorage.removeItem('loggedInUser');
-                // Redirect to index.html after logout
                 window.location.href = './index.html';
             });
         </script>

@@ -10,22 +10,22 @@ body {
 }
 
 .title {
-    font-size: 60px; /* Increased size */
-    color: #0c8d1b; /* Vibrant turquoise color, adjust as needed */
-    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8); /* Enhanced shadow for depth */
-    font-family: 'Press Start 2P', 'Arial', sans-serif; /* Use 'Press Start 2P' with Arial as a fallback */
+    font-size: 60px; 
+    color: #0c8d1b;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8); 
+    font-family: 'Press Start 2P', 'Arial', sans-serif; 
     padding-bottom: 125px;
 }
 
 
 .background {
-    position: fixed; /* Changed from 'relative' to 'fixed' */
+    position: fixed; 
     width: 100%;
     height: 100%;
     background-image: url('../images/background/game_back.gif');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; /* Ensure the image does not repeat */
+    background-repeat: no-repeat; 
     z-index: -1;
 }
 

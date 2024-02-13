@@ -1,4 +1,3 @@
-// Function to show a specific tab and hide others
 function showTab(tabName) {
     const tabs = ['totalPoints', 'ticTacToe', 'flappyBird'];
 
@@ -22,7 +21,6 @@ function showTab(tabName) {
     }
 };
 
-// Function to display total points
 function displayTotalPoints() {
     const users = JSON.parse(localStorage.getItem('users')) || [];
     const scores = JSON.parse(localStorage.getItem('scores')) || [];
@@ -42,11 +40,9 @@ function displayTotalPoints() {
         }
     });
 
-    // Sort the list by points in descending order
     sortAndDisplay(totalPointsList);
 }
 
-// Function to display game scores (tic tac toe, flappy bird, etc.)
 function displayGameScores(gameKey) {
     const users = JSON.parse(localStorage.getItem('users')) || [];
     const scores = JSON.parse(localStorage.getItem('scores')) || [];
@@ -75,7 +71,6 @@ function displayGameScores(gameKey) {
         }
     });
 
-    // Sort the list by points in descending order
     sortAndDisplay(gameScoresList);
 }
 
@@ -106,12 +101,9 @@ function sortAndDisplay(list) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Retrieve loggedInUser from local storage
     const loggedInUserString = localStorage.getItem('loggedInUser');
 
-    // Check if loggedInUser does not exist in local storage
     if (!loggedInUserString) {
-        // Redirect to index.html
         window.location.href = './index.html';
     }
 
@@ -120,8 +112,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
  // Logout functionality
  document.getElementById('logoutButton').addEventListener('click', () => {
-    // Clear loggedInUser from local storage
     localStorage.removeItem('loggedInUser');
-    // Redirect to index.html after logout
     window.location.href = './index.html';
 });

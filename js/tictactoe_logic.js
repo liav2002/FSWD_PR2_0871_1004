@@ -3,14 +3,11 @@ const loggedInUserString = localStorage.getItem('loggedInUser');
 
 // Check if loggedInUser does not exist in local storage
 if (!loggedInUserString) {
-    // Redirect to index.html
     window.location.href = './index.html';
 }
 
-// Parse the JSON string to get the object
+// Get LoggedIn User
 const loggedInUser = JSON.parse(loggedInUserString);
-
-// Get the user_id
 const loggedInUserId = loggedInUser.user_id;
 
 // Load scores from local storage
@@ -26,7 +23,6 @@ let gameActive = true;
 let totalPoints = 0;
 let currentPoints = 0;
 
-// Function to update the score display
 function updateScoreDisplay() {
     document.getElementById('total-points').textContent = totalPoints;
     document.getElementById('current-points').textContent = currentPoints;
@@ -44,7 +40,6 @@ function updateScoreDisplay() {
     saveScores2LocalStorage();
 }
 
-// Function to handle a move on the board
 function handleMove(index) {
     if (board[index] === '' && gameActive) {
         board[index] = currentPlayer;
@@ -91,7 +86,6 @@ function handleMove(index) {
     }
 }
 
-// Function to check for a win
 function checkWin() {
     const winPatterns = [
         [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
@@ -105,7 +99,6 @@ function checkWin() {
     });
 }
 
-// Function to check for a win
 function checkWin_alphabetapuring(board, player) {
     const winPatterns = [
         [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
@@ -119,7 +112,6 @@ function checkWin_alphabetapuring(board, player) {
     });
 }
 
-// Function to handle the bot's move with Alpha-Beta Pruning
 function botMove() {
     if (gameActive) {
         const bestMove = getBestMove(board, botPlayer, -Infinity, Infinity);
@@ -127,7 +119,6 @@ function botMove() {
     }
 }
 
-// Recursive function to find the best move using Minimax with Alpha-Beta Pruning
 function getBestMove(board, player, alpha, beta) {
     const emptyCells = board.reduce((acc, cell, index) => (cell === '') ? acc.concat(index) : acc, []);
 
@@ -173,13 +164,11 @@ function getBestMove(board, player, alpha, beta) {
     return (player === botPlayer) ? bestMove : bestScore;
 }
 
-// Function to save scores to local storage
 function saveScores2LocalStorage() {
     scores[userScoreIndex].tictactoe_score = totalPoints;
     localStorage.setItem('scores', JSON.stringify(scores));
 }
 
-// Function to reset the game
 function resetGame() {
     board = ['', '', '', '', '', '', '', '', ''];
     currentPlayer = 'X';
@@ -199,7 +188,6 @@ function resetGame() {
         botMove();
     }
 
-    // Update score display
     updateScoreDisplay();
 }
 
