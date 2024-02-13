@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
             profileDetails.innerHTML = '<p>User not found.</p>';
         }
     } else {
-        profileDetails.innerHTML = '<p>User details not available.</p>';
+        window.location.href = '../index.html';
     }
 });
 

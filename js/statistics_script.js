@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
             statisticsSection.appendChild(userTable);
         }
     } else {
-        statisticsSection.innerHTML = '<p>User statistics not available.</p>';
+        window.location.href = './index.html';
     }
 });
 
@@ -58,11 +58,10 @@ function toggleBlock(checkbox, userId) {
         users[userIndex].block = checkbox.checked ? "true" : "false";
         localStorage.setItem('users', JSON.stringify(users));
     }
+}// Check if loggedInUser does not exist in local storage
+const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+if (!loggedInUser) {
+    window.location.href = '../index.html';
 }
 
- // Logout functionality
- document.getElementById('logoutButton').addEventListener('click', () => {
-    localStorage.removeItem('loggedInUser');
-    window.location.href = './index.html';
-});
 

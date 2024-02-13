@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const loggedInUserString = localStorage.getItem('loggedInUser');
 
     if (!loggedInUserString) {
-        window.location.href = './index.html';
+        window.location.href = '../index.html';
     }
 
     showTab('totalPoints'); // Show the default tab
@@ -113,5 +113,5 @@ document.addEventListener('DOMContentLoaded', function () {
  // Logout functionality
  document.getElementById('logoutButton').addEventListener('click', () => {
     localStorage.removeItem('loggedInUser');
-    window.location.href = './index.html';
+    window.location.href = '../index.html';
 });

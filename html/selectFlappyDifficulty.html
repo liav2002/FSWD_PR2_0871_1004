@@ -18,6 +18,14 @@
     </div>
 
     <script>
+        // Retrieve loggedInUser from local storage
+        const loggedInUserString = localStorage.getItem('loggedInUser');
+
+        // Check if loggedInUser does not exist in local storage
+        if (!loggedInUserString) {
+            window.location.href = '../index.html';
+        }
+
         document.getElementById('simpleMode').addEventListener('click', function() {
             window.location.href = '../html/flappy.html?mode=easy';
         });
