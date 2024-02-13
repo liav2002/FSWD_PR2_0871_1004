@@ -257,6 +257,8 @@ document.addEventListener('DOMContentLoaded', function() {
         this.gameOver = false;
         this.pipeFreq =pipeFrequency;
         this.lastPipe = Date.now() - pipeFrequency;
+        this.speed = 3.5;/////
+        this.target = 5;///////
         gameOverScreen.style.display = 'none';
         backgroundMusic.play();
         this.loop();
