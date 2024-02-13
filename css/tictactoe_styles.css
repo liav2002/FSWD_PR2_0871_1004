@@ -83,7 +83,7 @@ button {
     color: #ffff;
 }
 
-.home-button {
+.games-button {
     background-color: #bd129b;
     position: fixed;
     bottom: 20px;
@@ -92,7 +92,7 @@ button {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.home-button:hover {
+.games-button:hover {
     background-color: #8b0d72;
     color: #ffff;
 }

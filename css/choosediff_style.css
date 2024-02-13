@@ -4,6 +4,18 @@
     align-items: center;
     height: 90vh;
 }
+
+.flappy-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/background/home_background.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
 img {
     cursor: pointer;
     margin: 10px;
@@ -24,7 +36,7 @@ button {
 }
 
 h1{
-    color:lightskyblue;
+    color:#4caf50;
     text-align: center;
 
 }

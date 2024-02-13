@@ -203,8 +203,15 @@ function resetGame() {
     updateScoreDisplay();
 }
 
+function gamesButtonClicked() {
+    window.location.href = './games.html';
+}
+
 // Event listener for the reset button
 document.getElementById('reset-button').addEventListener('click', resetGame);
+
+// Event listener for the games button
+document.getElementById('games-button-id').addEventListener('click', gamesButtonClicked);
 
 // Initialize the game board
 document.addEventListener('DOMContentLoaded', function () {
