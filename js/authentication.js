@@ -21,7 +21,7 @@ function login() {
 
             alert('Login successful!');
 
-            window.location.href = './home.html';
+            window.location.href = './html/home.html';
         } else {
             alert('Account is blocked. Contact support.');
         }

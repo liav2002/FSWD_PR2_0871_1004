@@ -20,27 +20,27 @@ document.addEventListener('DOMContentLoaded', function() {
   // #endregion
 
   //#region Game Sound
-  const flapSound = new Audio('./audio/flapsound.mp3');
-  const backgroundMusic = new Audio('./audio/backsound.mp3');
+  const flapSound = new Audio('../audio/flapsound.mp3');
+  const backgroundMusic = new Audio('../audio/backsound.mp3');
   backgroundMusic.loop = true;
-  const crashSound = new Audio('./audio/crashsound.mp3');
+  const crashSound = new Audio('../audio/crashsound.mp3');
   //#endregion
 
   // #region Game Assets
   const bird_img = new Image();
-  bird_img.src = './images/flappy/bird.png';
+  bird_img.src = '../images/flappy/bird.png';
   const top_p_img = new Image();
-  top_p_img.src = './images/flappy/pipe_top.png'; 
+  top_p_img.src = '../images/flappy/pipe_top.png'; 
   const bottom_p_img = new Image();
-  bottom_p_img.src = './images/flappy/pipe_bottom.png';
+  bottom_p_img.src = '../images/flappy/pipe_bottom.png';
   const  bg_img = new Image();
-  bg_img.src = './images/flappy/back.png';
+  bg_img.src = '../images/flappy/back.png';
   // #endregion
   
   // Authentication and score handling
   const loggedInUserString = localStorage.getItem('loggedInUser');
     if (!loggedInUserString) {
-        window.location.href = './index.html'; // Redirect if not logged in
+        window.location.href = '../index.html'; // Redirect if not logged in
     }
     const loggedInUser = JSON.parse(loggedInUserString);
     const loggedInUserId = loggedInUser.user_id;
@@ -288,8 +288,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Reattach event listeners
       document.getElementById('playAgainButton').addEventListener('click', () => this.reset());
-      document.getElementById('quitButton').addEventListener('click', () => window.location.href= "games.html");
-      document.getElementById('difficulty').addEventListener('click', () => window.location.href= "selectFlappyDifficulty.html");
+      document.getElementById('quitButton').addEventListener('click', () => window.location.href= "../html/games.html");
+      document.getElementById('difficulty').addEventListener('click', () => window.location.href= "../html/selectFlappyDifficulty.html");
     }
   }
 
@@ -330,7 +330,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     quitButton.addEventListener('click', function() {
-        window.location.href('games.html');
+        window.location.href('../html/games.html');
     });
 
     canvas.addEventListener('click', function() {

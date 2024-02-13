@@ -42,7 +42,7 @@ function register(){
         users.push(user);
         localStorage.setItem('users',JSON.stringify(users));
         alert(`${username} registration completed !`);
-        window.location.href='./index.html';
+        window.location.href='../index.html';
     }
     else{
         alert('User already exists! Please login instead of creating a new account.');

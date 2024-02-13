@@ -3,7 +3,7 @@ const loggedInUserString = localStorage.getItem('loggedInUser');
 
 // Check if loggedInUser does not exist in local storage
 if (!loggedInUserString) {
-    window.location.href = './index.html';
+    window.location.href = '../index.html';
 }
 
 // Get LoggedIn User
@@ -192,7 +192,7 @@ function resetGame() {
 }
 
 function gamesButtonClicked() {
-    window.location.href = './games.html';
+    window.location.href = '../html/games.html';
 }
 
 // Event listener for the reset button

@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home Page</title>
-        <link rel="icon" href="./images/icons/g4g_icon.png">
-        <link rel="stylesheet" href="./css/home_styles.css">
+        <link rel="icon" href="../images/icons/g4g_icon.png">
+        <link rel="stylesheet" href="../css/home_styles.css">
     </head>
     <body>
         <div id="page-cover" class="home-background">
@@ -14,10 +14,10 @@
             </header>
         
             <nav class="menu">
-                <button onclick="navigateTo('games.html')">Games</button>
-                <button onclick="navigateTo('scores.html')">Scores</button>
-                <button onclick="navigateTo('profile.html')">Profile</button>
-                <button onclick="navigateTo('statistics.html')">Statistics</button>
+                <button onclick="navigateTo('../html/games.html')">Games</button>
+                <button onclick="navigateTo('../html/scores.html')">Scores</button>
+                <button onclick="navigateTo('../html/profile.html')">Profile</button>
+                <button onclick="navigateTo('../html/statistics.html')">Statistics</button>
             </nav>
         
             <footer>
@@ -29,7 +29,7 @@
             // Check if loggedInUser does not exist in local storage
             const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
             if (!loggedInUser) {
-                window.location.href = './index.html';
+                window.location.href = '../index.html';
             }
 
             // Retrieve username from local storage
@@ -46,7 +46,7 @@
             // Logout Button Clicked
             document.getElementById('logoutButton').addEventListener('click', () => {
                 localStorage.removeItem('loggedInUser');
-                window.location.href = './index.html';
+                window.location.href = '../index.html';
             });
         </script>
     </body>

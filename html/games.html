@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Games</title>
-        <link rel="icon" href="./images/icons/g4g_icon.png">
-        <link rel="stylesheet" href="./css/games_styles.css">
+        <link rel="icon" href="../images/icons/g4g_icon.png">
+        <link rel="stylesheet" href="../css/games_styles.css">
     </head>
     <body>
         <div id="page-cover" class="games-background">
@@ -15,77 +15,77 @@
         
             <nav>
                 <ul>
-                    <li><a href="./home.html">Home</a></li>
-                    <li><a href="./profile.html">Profile</a></li>
-                    <li><a href="./scores.html">Scores</a></li>
-                    <li><a href="./statistics.html">Statistics</a></li>
+                    <li><a href="../html/home.html">Home</a></li>
+                    <li><a href="../html/profile.html">Profile</a></li>
+                    <li><a href="../html/scores.html">Scores</a></li>
+                    <li><a href="../html/statistics.html">Statistics</a></li>
                 </ul>
             </nav>
             
             <div id="gameContainer" class="game-container">
                 <div class="game-cards">
                     <div class="game-card">
-                        <img src="./images/icons/memory.png" alt="Memory Game Icon">
+                        <img src="../images/icons/memory.png" alt="Memory Game Icon">
                         <h2>Memory Game</h2>
                         <button onclick="navigateToGame('memory-game.html')">Play Now</button>
                     </div>         
                     <div class="game-card">
-                        <img src="./images/icons/flappy.png" alt="Flappy Bird Icon">
+                        <img src="../images/icons/flappy.png" alt="Flappy Bird Icon">
                         <h2>Flappy Bird</h2>
                         <button onclick="navigateToGame('selectFlappyDifficulty.html')">Play Now</button>
                     </div>        
                     <div class="game-card">
-                        <img src="./images/icons/tictactoe.png" alt="Tic Tac Toe Icon">
+                        <img src="../images/icons/tictactoe.png" alt="Tic Tac Toe Icon">
                         <h2>Tic Tac Toe</h2>
                         <button onclick="navigateToGame('tictactoe.html')">Play Now</button>
                     </div>
                     <div class="game-card">
-                        <img src="./images/icons/4row.png" alt="4 In a Row Icon">
+                        <img src="../images/icons/4row.png" alt="4 In a Row Icon">
                         <h2>4 In a Row</h2>
                         <button onclick="navigateToGame('./4InRow.html')">Play Now</button>
                     </div>
                     <div class="game-card">
-                        <img src="./images/icons/asphalt.png" alt="asphalt">
+                        <img src="../images/icons/asphalt.png" alt="asphalt">
                         <h2>Asphalt</h2>
                         <button onclick="navigateToGame('./asphalt.html')">Play Now</button>
                     </div>
                     <div class="game-card">
-                        <img src="./images/icons/backgammon.png" alt="Backgammon">
+                        <img src="../images/icons/backgammon.png" alt="Backgammon">
                         <h2>Backgammon</h2>
                         <button onclick="navigateToGame('./backgammon.html')">Play Now</button>
                     </div>
                     <div class="game-card">
-                        <img src="./images/icons/ball_puzzel.png" alt="Ball Puzzel">
+                        <img src="../images/icons/ball_puzzel.png" alt="Ball Puzzel">
                         <h2>Ball Puzzel</h2>
                         <button onclick="navigateToGame('./ballPuzzel.html')">Play Now</button>
                     </div>
                     <div class="game-card">
-                        <img src="./images/icons/checkers.png" alt="Checkers">
+                        <img src="../images/icons/checkers.png" alt="Checkers">
                         <h2>Checkers</h2>
                         <button onclick="navigateToGame('./checkers.html')">Play Now</button>
                     </div>
                     <div class="game-card">
-                        <img src="./images/icons/chess.png" alt="Chess">
+                        <img src="../images/icons/chess.png" alt="Chess">
                         <h2>Chess</h2>
                         <button onclick="navigateToGame('./chess.html')">Play Now</button>
                     </div>
                     <div class="game-card">
-                        <img src="./images/icons/fortnite.png" alt="Fortnite">
+                        <img src="../images/icons/fortnite.png" alt="Fortnite">
                         <h2>Fortnite</h2>
                         <button onclick="navigateToGame('./fortnite.html')">Play Now</button>
                     </div>
                     <div class="game-card">
-                        <img src="./images/icons/subway_surf.png" alt="Subaway Surf">
+                        <img src="../images/icons/subway_surf.png" alt="Subaway Surf">
                         <h2>Subaway Surf</h2>
                         <button onclick="navigateToGame('./subway_surf.html')">Play Now</button>
                     </div>
                     <div class="game-card">
-                        <img src="./images/icons/temple_run.png" alt="Temple Run">
+                        <img src="../images/icons/temple_run.png" alt="Temple Run">
                         <h2>Temple Run</h2>
                         <button onclick="navigateToGame('./temple_run.html')">Play Now</button>
                     </div>
                     <div class="game-card">
-                        <img src="./images/icons/taki.png" alt="Taki">
+                        <img src="../images/icons/taki.png" alt="Taki">
                         <h2>Taki</h2>
                         <button onclick="navigateToGame('./taki.html')">Play Now</button>
                     </div>
@@ -100,7 +100,7 @@
             const loggedInUserString = localStorage.getItem('loggedInUser');
 
             if (!loggedInUserString) {
-                window.location.href = './index.html';
+                window.location.href = '../index.html';
             }
 
             function navigateToGame(gamePage) {
@@ -120,7 +120,7 @@
             // Logout functionality
             document.getElementById('logoutButton').addEventListener('click', () => {
                 localStorage.removeItem('loggedInUser');
-                window.location.href = './index.html';
+                window.location.href = '../index.html';
             });
         </script>
     </body>
