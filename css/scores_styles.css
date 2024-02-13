@@ -10,10 +10,6 @@ body {
     color: #fff;
 }
 
-.scores-container {
-    margin-bottom: 193.8px; /* Add space at the bottom */
-}
-
 #page-cover {
     text-align: center;
     padding: 20px;
@@ -81,7 +77,15 @@ h2 {
     color: #fff;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    position: fixed;
+    bottom: 30px;
+    left: 49.35%;
+    transform: translateX(-50%);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#logoutButton:hover {
+    background-color: #c82333;
 }
 
 #logoutButton:hover {

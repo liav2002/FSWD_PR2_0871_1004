@@ -72,7 +72,11 @@ p {
     color: #fff;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 #logoutButton:hover {
